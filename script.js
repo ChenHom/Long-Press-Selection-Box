@@ -28,7 +28,7 @@ document.addEventListener('mouseup', (e) => {
   if (isLongPress) {
     start = [];
   } else if (!e.target.classList.contains('box')) {
-    clearSelection(); // 點擊空白處清除所有選中
+    clearSelection(); // 點擊空白處清除所有選中的盒子
   }
   document.removeEventListener('mousemove', handleMove);
   isLongPress = false;
