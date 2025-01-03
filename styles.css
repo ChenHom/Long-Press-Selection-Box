@@ -1,0 +1,34 @@
+body {
+  margin: 50px;
+  counter-reset: num;
+}
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.box::after {
+  counter-increment: num;
+  content: counter(num);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+
+.box.active {
+  background-color: skyblue;
+}
+
+.box:hover:active {
+  opacity: 0.9;
+  transition: opacity 0.35s;
+  /* 長按時的過渡效果 */
+}
